@@ -1,0 +1,31 @@
+.DS_Store
+
+# env / secrets
+.env
+.env.*
+web/.env
+web/.env.*
+apps/web/.env
+apps/web/.env.*
+
+# deps / build
+node_modules
+web/node_modules
+web/build
+web/dist
+apps/web/node_modules
+apps/web/build
+apps/web/dist
+
+# playwright
+web/playwright-report
+web/test-results
+apps/web/playwright-report
+apps/web/test-results
+
+.cursor/
+__pycache__/
+*.pyc
+*.pyo
+
+#

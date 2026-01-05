@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "eventsense://schemas/event_ir.schema.json",
+  "title": "Event IR",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["ticker", "selected_day_et", "causes"],
+  "properties": {
+    "ticker": { "type": "string", "minLength": 1 },
+    "selected_day_et": { "type": "string", "description": "YYYY-MM-DD (US/Eastern)" },
+    "price_move": { "type": "number" },
+    "causes": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "headline": { "type": "string" },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+          "citations": { "type": "array", "items": { "type": "object" } }
+        }
+      }
+    }
+  }
+}
+
+

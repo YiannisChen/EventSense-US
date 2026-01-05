@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "eventsense://schemas/report_ir.schema.json",
+  "title": "Report IR",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["run_id", "summary"],
+  "properties": {
+    "run_id": { "type": "string", "minLength": 1 },
+    "summary": { "type": "string" },
+    "execution_time_ms": { "type": "number" },
+    "retrieval_stats": { "type": "object", "additionalProperties": true },
+    "top_causes": { "type": "array", "items": { "type": "object" } }
+  }
+}
+
+
